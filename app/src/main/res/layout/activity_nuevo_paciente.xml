@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/fondo1"
+    tools:context="com.scorm.redfi.miconsulta.nuevoPaciente">
+
+    <RelativeLayout
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/etNombre"
+            android:layout_alignBottom="@+id/etNombre"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="82dp"
+            android:layout_toStartOf="@+id/etNombre"
+            android:textStyle="bold"
+            android:text="Nombre:" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="27dp"
+            android:layout_marginTop="18dp"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="textCapWords|textPersonName" />
+
+        <EditText
+            android:id="@+id/etApellidoPaterno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etNombre"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@+id/textView11"
+            android:ems="10"
+            android:hint="Apellido Paterno"
+            android:inputType="textCapWords|textPersonName" />
+
+        <EditText
+            android:id="@+id/etApellidoMaterno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etApellidoPaterno"
+            android:layout_below="@+id/etApellidoPaterno"
+            android:layout_marginTop="26dp"
+            android:ems="10"
+            android:hint="Apellido Materno"
+            android:inputType="textCapWords|textPersonName" />
+
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etApellidoMaterno"
+            android:layout_below="@+id/etApellidoMaterno"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Correo"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etCorreo"
+            android:layout_below="@+id/etCorreo"
+            android:layout_marginTop="27dp"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/etReContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etContrasena"
+            android:layout_below="@+id/etContrasena"
+            android:layout_marginTop="27dp"
+            android:ems="10"
+            android:hint="Repita contraseña"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/etApellidoPaterno"
+            android:layout_alignBottom="@+id/etApellidoPaterno"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toStartOf="@+id/etApellidoPaterno"
+            android:text="Apellido P. :"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="102dp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/etApellidoMaterno"
+            android:layout_alignBottom="@+id/etApellidoMaterno"
+            android:layout_alignEnd="@+id/textView12"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Apellido M.:"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteY="110dp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/etCorreo"
+            android:layout_alignBottom="@+id/etCorreo"
+            android:layout_alignEnd="@+id/textView13"
+            android:text="Correo:"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="230dp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/etReContrasena"
+            android:layout_alignBottom="@+id/etReContrasena"
+            android:layout_alignEnd="@+id/textView11"
+            android:textStyle="bold"
+            android:text="Contraseña:" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/etContrasena"
+            android:layout_alignBottom="@+id/etContrasena"
+            android:layout_alignStart="@+id/textView13"
+            android:textStyle="bold"
+            android:text="Contraseña:" />
+
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etReContrasena"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:onClick="onClickSiguiente"
+            android:text="Siguiente" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
