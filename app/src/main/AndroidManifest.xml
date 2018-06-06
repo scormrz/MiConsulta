@@ -33,7 +33,9 @@
             android:label="@string/title_activity_cambiar_datos"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".confirmaCita" />
-        <activity android:name=".seleccionaHora"></activity>
+        <activity android:name=".seleccionaHora" />
+        <activity android:name=".PosponerCita" />
+        <activity android:name=".MenuPosponer"></activity>
     </application>
 
 </manifest>

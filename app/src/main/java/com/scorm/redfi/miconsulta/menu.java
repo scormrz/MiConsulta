@@ -51,7 +51,7 @@ public class menu extends AppCompatActivity {
     }
     public void onClickPosponer(View v)
     {
-        Intent intent = new Intent(this,Posponer.class);
+        Intent intent = new Intent(this,MenuPosponer.class);
         intent.putExtra("paci",idPaciente);
 
         startActivity(intent);

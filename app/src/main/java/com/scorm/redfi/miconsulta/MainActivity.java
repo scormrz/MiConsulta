@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static String SOAP_ACTION="http://ws/buscarEmail";
     private static String METHOD_NAME="buscarEmail";
     private static String NAMESPACE="http://ws/";
-    private static String URL="http://192.168.43.223:8080/WSClinica/ClinicaWS?WSDL";
+    private static String URL="http://192.168.1.72:8080/WSClinica/ClinicaWS?WSDL";
 
 
     @Override

@@ -57,7 +57,20 @@
             android:text="Agendar Cita" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnPosponer"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="165dp"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="onClickPosponer"
+            android:text="Posponer Cita"
+            android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView.PopupMenu"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/button8"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"

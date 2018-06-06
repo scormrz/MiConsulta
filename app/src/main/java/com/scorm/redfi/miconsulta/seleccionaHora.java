@@ -23,7 +23,7 @@ public class seleccionaHora extends AppCompatActivity {
     private static String SOAP_ACTION="http://ws/horaCita";
     private static String METHOD_NAME="horaCita";
     private static String NAMESPACE="http://ws/";
-    private static String URL="http://192.168.43.223:8080/WSClinica/ClinicaWS?WSDL";
+    private static String URL="http://192.168.1.72:8080/WSClinica/ClinicaWS?WSDL";
 
     String idPaciente;
     String sNomb;
