@@ -34,7 +34,7 @@ public class cambiarDatos extends AppCompatActivity implements AdapterView.OnIte
     private static String SOAP_ACTION="http://ws/cambiarDatos";
     private static String METHOD_NAME="cambiarDatos";
     private static String NAMESPACE="http://ws/";
-    private static String URL="http://192.168.1.72:8080/WSClinica/ClinicaWS?WSDL";
+    private static String URL="http://192.168.137.15:8080/WSClinica/ClinicaWS?WSDL";
 
     private Spinner spEstados;
     private ArrayAdapter<String> adapter;
@@ -158,7 +158,7 @@ public class cambiarDatos extends AppCompatActivity implements AdapterView.OnIte
         }.start();
 
         Context context = getApplicationContext();
-        CharSequence text ="Holi";
+        CharSequence text ="Actualizando Datos";
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();

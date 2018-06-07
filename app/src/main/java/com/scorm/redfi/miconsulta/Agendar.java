@@ -34,13 +34,8 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener, 
     Button btnFecha,btnSiguiente;
     EditText txtFecha,txtHora;
 
-    String nombre;
     String idPaciente;
     String snombre;
-    String ap;
-    String am;
-    String correo;
-    String pass;
     String motivo;
     String sminuto;
     String shora;
@@ -51,7 +46,6 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener, 
     String sNomb;
     String fechaAct;
     String fechaSel="2018-05-27";
-    String datos[];
 
 
 

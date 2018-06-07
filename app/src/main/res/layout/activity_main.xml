@@ -57,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.14"
                 android:text="Email:"
+                android:textColor="@color/colorPrimary"
                 android:textAlignment="viewEnd" />
 
             <EditText
@@ -79,6 +80,7 @@
                 android:layout_width="83dp"
                 android:layout_height="wrap_content"
                 android:text="Contraseña:"
+                android:textColor="@color/colorPrimary"
                 android:textAlignment="viewEnd" />
 
             <EditText

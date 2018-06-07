@@ -12,7 +12,18 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapPrimitive;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
+
 public class Posponer extends AppCompatActivity {
+
+    private static String SOAP_ACTION="http://ws/eliminarCita";
+    private static String METHOD_NAME="eliminarCita";
+    private static String NAMESPACE="http://ws/";
+    private static String URL="http://192.168.137.15:8080/WSClinica/ClinicaWS?WSDL";
 
     String datos[];
 
@@ -37,6 +48,7 @@ public class Posponer extends AppCompatActivity {
         if(bundle!=null)
         {
             datos=bundle.getStringArray("datos");
+            idPaciente=(String)bundle.get("id_paciente");
         }
 
 
@@ -84,10 +96,68 @@ public class Posponer extends AppCompatActivity {
         }
         if(tama>0)
         {
+
+
+
+            new Thread()
+            {
+                public void run()
+                {
+                    String elejido[];
+                    String sresul=datos[subindice];
+                    elejido=sresul.split(": ");
+                    String citaFecha=elejido[2];
+                    String citaHora=elejido[3];
+
+                    String fCitaFecha="";
+                    for(int i=0;i<11;i++)
+                    {
+                        fCitaFecha=fCitaFecha+citaFecha.charAt(i);
+                    }
+
+                    String finalCitaHora="";
+                    for(int i=0;i<5;i++)
+                    {
+                        finalCitaHora=finalCitaHora+citaHora.charAt(i);
+                    }
+
+
+                    //Declaracion de los EditText del layout
+                    SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
+
+
+                    request.addProperty("id_paciente",idPaciente);
+                    request.addProperty("fecha_cita",fCitaFecha);
+                    request.addProperty("hora_cita",finalCitaHora);
+
+
+
+                    SoapSerializationEnvelope envolpe = new SoapSerializationEnvelope(SoapEnvelope.VER10);
+                    envolpe.setOutputSoapObject(request);
+                    try {
+                        HttpTransportSE http = new HttpTransportSE(URL);
+                        http.call(SOAP_ACTION, envolpe);
+                        final SoapPrimitive response = (SoapPrimitive) envolpe.getResponse();
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+
+
+
+                }
+            }.start();
+
+
             Intent intent = new Intent(this,Agendar.class);
             intent.putExtra("paci",idPaciente);
 
             startActivity(intent);
+            Posponer.this.finish();
         }
     }
 
@@ -113,7 +183,7 @@ public class Posponer extends AppCompatActivity {
         }
 
         Context context = getApplicationContext();
-        CharSequence text =finalCitaHora;
+        CharSequence text =idPaciente;
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();

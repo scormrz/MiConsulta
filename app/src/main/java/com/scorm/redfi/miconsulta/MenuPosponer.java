@@ -18,7 +18,7 @@ public class MenuPosponer extends AppCompatActivity {
     private static String SOAP_ACTION="http://ws/buscarCitaPosponer";
     private static String METHOD_NAME="buscarCitaPosponer";
     private static String NAMESPACE="http://ws/";
-    private static String URL="http://192.168.1.72:8080/WSClinica/ClinicaWS?WSDL";
+    private static String URL="http://192.168.137.15:8080/WSClinica/ClinicaWS?WSDL";
 
 
     String idPaciente;

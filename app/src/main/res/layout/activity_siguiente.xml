@@ -151,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.37"
-                android:text="Municipio:"
+                android:text="Estado:"
                 android:textAlignment="textEnd"
                 android:textStyle="bold" />
 
@@ -250,39 +250,20 @@
             android:layout_height="49dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="34dp"
-                android:layout_height="wrap_content"
-                android:text="Año:" />
-
             <Spinner
                 android:id="@+id/spAno"
-                android:layout_width="81dp"
+                android:layout_width="93dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.06" />
 
-            <TextView
-                android:id="@+id/tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.05"
-                android:text="Mes:" />
-
             <Spinner
                 android:id="@+id/spMes"
-                android:layout_width="102dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView33"
-                android:layout_width="32dp"
-                android:layout_height="wrap_content"
-                android:text="Día:" />
 
             <Spinner
                 android:id="@+id/spDia"
-                android:layout_width="62dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.16" />
 
